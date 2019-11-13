@@ -1,4 +1,4 @@
-# ArchLinux Instalação
+# Arch Linux Instalação
 Falta organizar a ordem dos pacotes para facilitar modularização
 
 ## AMD Radeon --> Plasma
