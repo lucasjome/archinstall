@@ -12,16 +12,16 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 
 ## Packages AUR
 
-ccnet-server 7.0.5-1
-ckb-next 0.4.2-2
-google-chrome 78.0.3904.87-1
-libsearpc 2:3.1-2
-seafile 7.0.2-1
-seafile-client 7.0.2-1
-spotify 1:1.1.10.546-1
-steam-fonts 1.0.0-4
-tela-icon-theme-git 156.79fff6db-1
-ttf-ms-fonts 2.0-10
-ttf-windows 1-1
-visual-studio-code-bin 1.39.2-1
-yay 9.4.2-1
+- ccnet-server 7.0.5-1
+- ckb-next 0.4.2-2
+- google-chrome 78.0.3904.87-1
+- libsearpc 2:3.1-2
+- seafile 7.0.2-1
+- seafile-client 7.0.2-1
+- spotify 1:1.1.10.546-1
+- steam-fonts 1.0.0-4
+- tela-icon-theme-git 156.79fff6db-1
+- ttf-ms-fonts 2.0-10
+- ttf-windows 1-1
+- visual-studio-code-bin 1.39.2-1
+- yay 9.4.2-1
