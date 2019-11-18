@@ -16,7 +16,11 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  - 
  
 ### Packages AUR
-ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
+#### Desktop
+yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
+
+#### Notebook
+yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
 
 
 
