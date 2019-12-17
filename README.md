@@ -16,6 +16,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 ## Depois da Instalação (Under Construction)
  - Criar os aliases do zsh
  - Configurações de Fontes
+ - Ativar ufw
  - 
  
 ### Packages AUR
