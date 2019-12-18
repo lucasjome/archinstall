@@ -15,6 +15,8 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 
 ## Durante a Instalação (Under Construction)
 ```bash
+ genfstab -U -p /mnt >> /mnt/etc/fstab
+ arch-chroot /mnt /bin/bash
  nano /etc/locale.gen # Liberar en_US e pt_BR
  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
  hwclock --systohc --utc
@@ -24,7 +26,10 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  systemctl enable NetworkManager
  systemctl enable ufw.service
  useradd -m -g users -G wheel -s /bin/bash <nome>
- EDITOR=nano VISUDO
+ passwd # for root
+ passwd <nome> # for user
+ EDITOR=nano visudo
+ systemctl enable [sddm|gdm]
 ```
 ### Grub
 
@@ -34,7 +39,7 @@ mount /dev/sda1 /boot/efi
 lsblk # to check if everything is mounted correctly
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
-# Depois
+# After
 sudo mkdir /boot/efi/EFI/BOOT
 sudo cp /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
 sudo nano /boot/efi/startup.nsh
