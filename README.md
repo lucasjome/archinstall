@@ -1,4 +1,4 @@
-# AMD Radeon
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"# AMD Radeon
 ## Plasma
 pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs-3g efibootmgr os-prober grub unrar xorg xorg-server firefox grub-customizer libreoffice-fresh unzip pavucontrol zsh go bash iputils util-linux perl bzip2 nethogs mtr usbutils pciutils git materia-gtk-theme libva-mesa-driver htop gnome-disk-utility git go intel-ucode exfat-utils qbittorrent lollypop materia-gtk-theme lshw lyx texlive-most flameshot neofetch screenfetch aspell-pt figlet libreoffice-fresh-pt-br wget lib32-vulkan-radeon vulkan-radeon opencl-mesa lib32-mesa-vdpau lib32-mesa lib32-libva-mesa-driver vulkan-mesa-layer xf86-video-amdgpu lib32-libva1 lib32-glu mesa mesa-demos mesa-vdpau glu ark dolphin plasma kate gwenview spectacle konsole sddm materia-kde qt5-imageformats kimageformats latte-dock plasma-wayland-session okular celluloid zsh-syntax-highlighting
 
@@ -69,7 +69,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```bash
 yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
 ```
-#### Notebook
+#### Laptop
 ```bash
 yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
 ```
@@ -112,6 +112,7 @@ Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 ```
 
 #### Cursor Theme
+ - Bibata
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"
 ```
