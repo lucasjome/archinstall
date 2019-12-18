@@ -49,9 +49,7 @@ sudo nano /boot/efi/startup.nsh # insert line below
 ## Depois da Instalação (Under Construction)
 #### Yay
 ```bash
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
 #### Oh My Zsh
 ```bash
