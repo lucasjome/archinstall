@@ -117,3 +117,8 @@ Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"
 ```
 
+#### Swappiness for SSD
+ ```bash
+ echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf
+ ```
+
