@@ -52,6 +52,7 @@ sudo nano /boot/efi/startup.nsh # insert line below
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -r yay
 ```
 #### Oh My Zsh
+ - Mudar opção de System-Beep
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
@@ -60,7 +61,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
  - Criar os aliases do zsh
  - Configurações de Fontes
  - Ativar ufw
- - Trocar shell para zsh
  
 ### Packages AUR
 #### Desktop
