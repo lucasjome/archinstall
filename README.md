@@ -29,7 +29,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  useradd -m -g users -G wheel -s /bin/bash <nome>
  passwd # for root
  passwd <nome> # for user
- EDITOR=nano visudo
+ EDITOR=nano visudo # uncomment %wheel ALL=(ALL) ALL
  systemctl enable [sddm|gdm]
 ```
 ### Grub
