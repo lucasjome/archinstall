@@ -47,11 +47,23 @@ sudo nano /boot/efi/startup.nsh # insert line below
 # bcfg boot add 1 fs0:\EFI\GRUB\grubx64.efi "My GRUB bootloader"
 ```
 ## Depois da Instalação (Under Construction)
- - Ajeitar mirrors
+#### Yay
+```bash
+git clone https://aur.archlinux.org/yay.gitgit clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+#### Oh My Zsh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+#### Lembrar
+ - Ajeitar mirrorshttps://github.com/lucasjome/archinstall/edit/master/README.md
  - Liberar multilib
  - Criar os aliases do zsh
  - Configurações de Fontes
  - Ativar ufw
+ - Trocar shell para zsh
  
 ### Packages AUR
 #### Desktop
@@ -60,5 +72,19 @@ yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme
 #### Notebook
 yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
 
+### Tweaks adicionais
+#### Fontes
+ - Adicionar à /etc/fonts/local.conf
+```xml
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>  
+<fontconfig>
+ <match target="font">
+  <edit mode="assign" name="hinting">
+   <bool>false</bool>
+  </edit>
+ </match>
+</fontconfig>
+```
 
 
