@@ -17,7 +17,8 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 ```bash
  genfstab -U -p /mnt >> /mnt/etc/fstab
  arch-chroot /mnt /bin/bash
- nano /etc/locale.gen # Liberar en_US e pt_BR
+ nano /etc/locale.gen # en_US e pt_BR
+ locale-gen
  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
  hwclock --systohc --utc
  echo "nome-pc" > /etc/hostname
@@ -42,8 +43,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # After
 sudo mkdir /boot/efi/EFI/BOOT
 sudo cp /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
-sudo nano /boot/efi/startup.nsh
-bcfg boot add 1 fs0:\EFI\GRUB\grubx64.efi "My GRUB bootloader"
+sudo nano /boot/efi/startup.nsh # insert line below
+# bcfg boot add 1 fs0:\EFI\GRUB\grubx64.efi "My GRUB bootloader"
 ```
 ## Depois da Instalação (Under Construction)
  - Ajeitar mirrors
