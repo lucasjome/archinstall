@@ -58,7 +58,6 @@ makepkg -si
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 #### Lembrar
- - Ajeitar mirrorshttps://github.com/lucasjome/archinstall/edit/master/README.md
  - Liberar multilib
  - Criar os aliases do zsh
  - Configurações de Fontes
@@ -75,6 +74,31 @@ yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme
 yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
 ```
 ### Tweaks adicionais
+
+#### Mirrors
+ - Adicionar a /etc/pacman.d/mirrorlist
+```
+##
+## Arch Linux repository mirrorlist
+## Generated on 2019-12-18
+##
+
+## Brazil
+Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
+Server = https://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
+Server = http://linorg.usp.br/archlinux/$repo/os/$arch
+Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
+Server = http://br.mirror.archlinux-br.org/$repo/os/$arch
+Server = http://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
+Server = http://linorg.usp.br/archlinux/$repo/os/$arch
+Server = http://pet.inf.ufsc.br/mirrors/archlinux/$repo/os/$arch
+Server = http://archlinux.pop-es.rnp.br/$repo/os/$arch
+Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
+Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
+
+
+```
+
 #### Fontes
  - Adicionar à /etc/fonts/local.conf
 ```xml
