@@ -67,11 +67,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
  
 ### Packages AUR
 #### Desktop
+```bash
 yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
-
+```
 #### Notebook
+```bash
 yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
-
+```
 ### Tweaks adicionais
 #### Fontes
  - Adicionar à /etc/fonts/local.conf
