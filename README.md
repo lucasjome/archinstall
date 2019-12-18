@@ -117,4 +117,3 @@ Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"
 ```
 
-
