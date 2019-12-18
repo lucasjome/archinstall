@@ -95,8 +95,6 @@ Server = http://pet.inf.ufsc.br/mirrors/archlinux/$repo/os/$arch
 Server = http://archlinux.pop-es.rnp.br/$repo/os/$arch
 Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
 Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
-
-
 ```
 
 #### Fontes
