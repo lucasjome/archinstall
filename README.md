@@ -21,16 +21,16 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  locale-gen
  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
  hwclock --systohc --utc
- echo "nome-pc" > /etc/hostname
+ echo "hostname-pc" > /etc/hostname
  echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
  echo "KEYMAP=br-abnt2" > /etc/vconsole.conf
  systemctl enable NetworkManager
  systemctl enable ufw.service
- useradd -m -g users -G wheel -s /bin/bash <nome>
+ useradd -m -g users -G wheel -s /bin/bash <username>
  passwd # for root
- passwd <nome> # for user
+ passwd <username> # for user
  EDITOR=nano visudo # uncomment %wheel ALL=(ALL) ALL
- systemctl enable [sddm|gdm]
+ systemctl enable [sddm|gdm] # choose one based on pacstrap choice
 ```
 ### Grub
 
@@ -96,7 +96,7 @@ Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 ```
 
 #### Fontes
- - Adicionar à /etc/fonts/local.conf
+ - Adicionar a /etc/fonts/local.conf
 ```xml
 <?xml version='1.0'?>
 <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>  
