@@ -120,8 +120,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/ma
  echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf
  ```
  
- #### Zsh Highlight Syntax
+ #### Zsh Syntax Highlighing
  ```bash
  echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> .zshrc
+ sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
  ```
 
