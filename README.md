@@ -119,4 +119,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/ma
  ```bash
  echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf
  ```
+ 
+ #### Zsh Highlight Syntax
+ ```bash
+ echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> .zshrc
+ ```
 
