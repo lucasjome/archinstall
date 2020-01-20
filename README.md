@@ -130,6 +130,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/ma
 ```bash
 sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
+
+sudo systemctl start avahi-daemon.service
+sudo systemctl enable avahi-daemon.service
 ```
 - add to "hosts:" /etc/nsswitch.conf
 ```bash
