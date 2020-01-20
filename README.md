@@ -133,5 +133,5 @@ sudo systemctl start org.cups.cupsd.service
 ```
 - add to "hosts:" /etc/nsswitch.conf
 ```bash
-mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
+mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
 ```
