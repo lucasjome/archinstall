@@ -133,8 +133,8 @@ sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 
 # avahi network discovery
-sudo systemctl start avahi-daemon.service
 sudo systemctl enable avahi-daemon.service
+sudo systemctl start avahi-daemon.service
 ```
 - add the following line to "hosts:" section at /etc/nsswitch.conf
 ```bash
