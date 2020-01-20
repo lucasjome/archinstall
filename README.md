@@ -134,7 +134,7 @@ sudo systemctl start org.cups.cupsd.service
 sudo systemctl start avahi-daemon.service
 sudo systemctl enable avahi-daemon.service
 ```
-- add to "hosts:" /etc/nsswitch.conf
+- add the following to "hosts:" section at /etc/nsswitch.conf
 ```bash
 mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
 ```
