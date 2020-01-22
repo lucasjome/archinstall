@@ -31,6 +31,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  passwd <username> # for user
  EDITOR=nano visudo # uncomment %wheel ALL=(ALL) ALL
  systemctl enable [sddm|gdm] # choose one based on pacstrap choice
+ systemctl enable ufw.service
 ```
 ### Grub
 
