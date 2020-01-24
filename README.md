@@ -13,8 +13,8 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 ## Gnome
 pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs-3g efibootmgr os-prober grub unrar xorg xorg-server firefox grub-customizer libreoffice-fresh unzip pavucontrol zsh go bash iputils util-linux perl bzip2 nethogs mtr usbutils pciutils git materia-gtk-theme libva-mesa-driver htop gnome-disk-utility git go intel-ucode exfat-utils qbittorrent lollypop materia-gtk-theme lshw lyx texlive-most flameshot neofetch screenfetch aspell-pt figlet libreoffice-fresh-pt-br wget lib32-vulkan-intel vulkan-intel lib32-mesa-vdpau lib32-mesa lib32-libva-mesa-driver vulkan-mesa-layer xf86-video-intel lib32-libva1 lib32-libva1-intel-driver lib32-glu glu mesa mesa-demos mesa-vdpau intel-media-driver intel-gmmlib gnome gdm gnome-tweaks capitaine-cursors chrome-gnome-shell celluloid zsh-syntax-highlighting cups nss-mdns
 
-# Instalação
-## Durante a Instalação (Under Construction)
+# Installation process
+## During installation (Under Construction)
 ```bash
  genfstab -U -p /mnt >> /mnt/etc/fstab
  arch-chroot /mnt /bin/bash
@@ -47,21 +47,21 @@ sudo cp /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
 sudo nano /boot/efi/startup.nsh # insert line below
 # bcfg boot add 1 fs0:\EFI\GRUB\grubx64.efi "My GRUB bootloader"
 ```
-## Depois da Instalação (Under Construction)
+## After installation (Under Construction)
 #### Yay
 ```bash
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -r yay
 ```
 #### Oh My Zsh
- - Mudar opção de System-Beep
+ - Change System-Beep option
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-#### Lembrar
- - Liberar multilib
- - Criar os aliases do zsh
- - Configurações de Fontes
- - Ativar ufw
+#### Reminders
+ - Enable multilib
+ - Set zsh aliases
+ - Set up font configuration
+ - Start and enable ufw
  
 ### Packages AUR
 #### Desktop
@@ -72,10 +72,10 @@ yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme
 
 yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
 
-### Tweaks adicionais
+### Additional tweaks
 
 #### Mirrors
- - Adicionar a /etc/pacman.d/mirrorlist
+ - Add to /etc/pacman.d/mirrorlist
 ```
 ##
 ## Arch Linux repository mirrorlist
@@ -96,8 +96,8 @@ Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
 Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 ```
 
-#### Fontes
- - Adicionar a /etc/fonts/local.conf
+#### Fonts
+ - Add to /etc/fonts/local.conf
 ```xml
 <?xml version='1.0'?>
 <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>  
@@ -116,7 +116,7 @@ Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"
 ```
 
-#### Swappiness for SSD
+#### SSD swappiness
  ```bash
  echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf
  ```
