@@ -63,7 +63,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
  - Set up font configuration
  - Start and enable ufw
  
-### Packages AUR
+### AUR packages
 #### Desktop
 
 yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
@@ -111,7 +111,7 @@ To generate a suitable mirrorlist (customized by country), refer to https://www.
 </fontconfig>
 ```
 
-#### Cursor Theme
+#### Cursor theme
  - Bibata
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"
@@ -122,7 +122,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/ma
  echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf
  ```
  
-#### Zsh Syntax Highlighing
+#### Zsh syntax highlighing
  ```bash
  echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> .zshrc
  sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
@@ -139,7 +139,7 @@ sudo systemctl start org.cups.cupsd.service
 sudo systemctl enable avahi-daemon.service
 sudo systemctl start avahi-daemon.service
 ```
-- add the following line to "hosts:" section at /etc/nsswitch.conf
+- Add the following line to "hosts:" section at /etc/nsswitch.conf
 ```bash
 mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
 ```
