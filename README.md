@@ -61,7 +61,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
  - Enable multilib
  - Set zsh aliases
  - Set up font configuration
- - Start and enable ufw
+ - Enable ufw service
  
 ### AUR packages
 #### Desktop
