@@ -100,7 +100,7 @@ Server = http://archlinux.pop-es.rnp.br/$repo/os/$arch
 Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
 Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 ```
-To generate a suitable mirrorlist (customized by country), refer to https://www.archlinux.org/mirrorlist/.
+To generate a suitable mirrorlist (customized by country), refer to [mirrorlist generator](https://www.archlinux.org/mirrorlist/).
 
 #### Fonts
  - Add to /etc/fonts/local.conf
