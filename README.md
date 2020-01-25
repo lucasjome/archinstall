@@ -48,6 +48,11 @@ sudo nano /boot/efi/startup.nsh # insert line below
 # bcfg boot add 1 fs0:\EFI\GRUB\grubx64.efi "My GRUB bootloader"
 ```
 ## After installation (Under construction)
+#### multilib 
+```bash
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+```
+
 #### Yay
 ```bash
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -r yay
@@ -58,20 +63,20 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. &&
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 #### Reminders
- - Enable multilib
  - Set zsh aliases
  - Set up font configuration
- - Enable ufw service
+ - Set Gufw
  
 ### AUR packages
 #### Desktop
-
+```bash
 yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
+```
 
 #### Laptop
-
+```bash
 yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
-
+```
 ### Additional tweaks
 
 #### Mirrors
