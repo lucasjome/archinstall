@@ -120,6 +120,12 @@ Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 </fontconfig>
 ```
 
+##### Window Buttons Applet
+```bash
+yay -S plasma5-applets-window-buttons-git
+```
+> Only for KDE Plasma
+
 ##### Cursor theme
  - Bibata
 ```bash
