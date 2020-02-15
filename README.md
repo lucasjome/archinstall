@@ -122,7 +122,7 @@ Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
 
 ##### Window Buttons Applet
 ```bash
-yay -S plasma5-applets-window-buttons-git
+yay -S plasma5-applets-window-buttons-git plasma5-applets-window-title-git
 ```
 > Only for KDE Plasma
 
