@@ -135,8 +135,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/ma
 
 ##### SSD swappiness
  ```bash
- echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf
- ```
+sudo zsh -c 'echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf' 
+```
  
 ##### Zsh syntax highlighing
  ```bash
