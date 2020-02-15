@@ -68,21 +68,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. &&
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-##### Reminders
- - Set zsh aliases
- - Set up font configuration
- - Set Gufw
- 
-#### AUR packages
-##### Desktop
-```bash
-yay -S ckb-next google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
-```
 
-##### Laptop
-```bash
-yay -S google-chrome seafile-client spotify steam-fonts tela-icon-theme-git ttf-ms-fonts ttf-windows visual-studio-code-bin
-```
 #### Additional tweaks
 
 ##### Mirrors
