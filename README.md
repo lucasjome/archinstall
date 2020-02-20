@@ -32,7 +32,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  echo "KEYMAP=br-abnt2" > /etc/vconsole.conf
  systemctl enable NetworkManager
  systemctl enable ufw.service
- #systemctl enable bluetooth.service 
+ systemctl enable bluetooth.service 
  useradd -m -g users -G wheel -s /bin/bash <username>
  passwd # for root
  passwd <username> # for user
