@@ -152,7 +152,7 @@ sudo sed -i 's,#MAKEFLAGS="-j2",MAKEFLAGS="-j$(($(nproc)-1))",g' /etc/makepkg.co
 sudo sed -i "s,PKGEXT='.pkg.tar.xz',PKGEXT='.pkg.tar.zst',g" /etc/makepkg.conf
 sudo sed -i "s,COMPRESSZST=(zstd -c -z -q -),COMPRESSZST=(zstd -c -z -q - --threads=$(($(nproc)-1))),g" /etc/makepkg.conf
 ```
-#### KDE Plasma Cursor Fix
+##### KDE Plasma Cursor Fix
 ```bash
 sudo sed -i "s,Inherits=Adwaita,Inherits=breeze_cursors,g" /usr/share/icons/default/index.theme
 ```
