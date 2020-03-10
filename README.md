@@ -73,26 +73,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #### Additional tweaks
 
 ##### Mirrors
- - Add to /etc/pacman.d/mirrorlist
+```bash
+yay -S fetchmirrors
+sudo fetchmirrors -c BR
 ```
-##
-## Arch Linux repository mirrorlist
-## Generated on 2019-12-18
-##
-
-## Brazil
-Server = http://linorg.usp.br/archlinux/$repo/os/$arch
-Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
-Server = https://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
-Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
-Server = http://br.mirror.archlinux-br.org/$repo/os/$arch
-Server = http://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
-Server = http://pet.inf.ufsc.br/mirrors/archlinux/$repo/os/$arch
-Server = http://archlinux.pop-es.rnp.br/$repo/os/$arch
-Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
-Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
-```
-  > Note: to generate a suitable mirrorlist (customized by country), refer to [mirrorlist generator](https://www.archlinux.org/mirrorlist/).
 
 ##### Fonts
  - Add to /etc/fonts/local.conf
