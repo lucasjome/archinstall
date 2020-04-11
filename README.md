@@ -145,7 +145,3 @@ sudo sed -i "s,COMPRESSZST=(zstd -c -z -q -),COMPRESSZST=(zstd -c -z -q - --thre
 sudo sed -i "s,Inherits=Adwaita,Inherits=breeze_cursors,g" /usr/share/icons/default/index.theme
 ```
 
-##### Japanese, Korean and Chinese Fonts
-```bash
-yay -S ttf-tw wqy-microhei wqy-zenhei ttf-arphic-ukai opendesktop-fonts wqy-bitmapfont ttf-hannom otf-ipafont ttf-vlgothic ttf-mplus  ttf-monapo ttf-sazanami ttf-nanum ttf-nanumgothic_coding
-```
