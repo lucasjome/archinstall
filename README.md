@@ -91,6 +91,10 @@ sudo fetchmirrors -c BR
  </match>
 </fontconfig>
 ```
+ - Japanese, Korean and Chinese Fonts
+```bash
+yay -S ttf-tw wqy-microhei wqy-zenhei ttf-arphic-ukai opendesktop-fonts wqy-bitmapfont ttf-hannom otf-ipafont ttf-vlgothic ttf-mplus  ttf-monapo ttf-sazanami ttf-nanum ttf-nanumgothic_coding
+```
 
 ##### Window Buttons Applet
 ```bash
