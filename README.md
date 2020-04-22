@@ -62,7 +62,7 @@ sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 ##### Yay
 ```bash
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -r yay
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && sudo rm -r yay
 ```
 ##### Oh My Zsh
  - Change System-Beep option
