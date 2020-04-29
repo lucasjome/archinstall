@@ -89,17 +89,6 @@ sudo fetchmirrors -c BR
 ```
 
 ##### Fonts
- - Add to /etc/fonts/local.conf
-```xml
-<?xml version='1.0'?>
-<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>  
-<fontconfig>
- <match target="font">
-  <edit mode="assign" name="hinting">
-   <bool>false</bool>
-  </edit>
- </match>
-</fontconfig>
 ```
  - Japanese, Korean and Chinese Fonts
 ```bash
