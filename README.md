@@ -23,10 +23,12 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 ```bash
  genfstab -U -p /mnt >> /mnt/etc/fstab
  arch-chroot /mnt /bin/bash
- # nano /etc/locale.gen # en_US e pt_BR --> Automated belowsudo sed -i 's,# %wheel ALL=(ALL) ALL,%wheel ALL=(ALL) ALL,g'
+ 
+ # nano /etc/locale.gen # en_US e pt_BR --> Automated below
  sed -i 's,#en_US.UTF-8 UTF-8,en_US.UTF-8 UTF-8,g' /etc/locale.gen
  sed -i 's,#pt_BR.UTF-8 UTF-8,pt_BR.UTF-8 UTF-8,g' /etc/locale.gen
  locale-gen
+ 
  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
  hwclock --systohc --utc
  echo "hostname-pc" > /etc/hostname
@@ -38,8 +40,10 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  useradd -m -g users -G wheel -s /bin/bash <username>
  passwd # for root
  passwd <username> # for user
+ 
  # EDITOR=nano visudo # uncomment %wheel ALL=(ALL) ALL --> Automated below
  sed -i 's,# %wheel ALL=(ALL) ALL,%wheel ALL=(ALL) ALL,g' /etc/sudoers
+ 
  systemctl enable [sddm|gdm] # choose one based on pacstrap choice
  xdg-user-dirs-update # KDE Plasma only
 ```
