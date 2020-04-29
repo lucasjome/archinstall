@@ -31,12 +31,15 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  
  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
  hwclock --systohc --utc
+ 
  echo "hostname-pc" > /etc/hostname
  echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
  echo "KEYMAP=br-abnt2" > /etc/vconsole.conf
+ 
  systemctl enable NetworkManager
  systemctl enable ufw.service
  systemctl enable bluetooth.service 
+ 
  useradd -m -g users -G wheel -s /bin/bash <username>
  passwd # for root
  passwd <username> # for user
