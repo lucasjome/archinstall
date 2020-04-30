@@ -142,4 +142,7 @@ sudo sed -i "s,COMPRESSZST=(zstd -c -z -q -),COMPRESSZST=(zstd -c -z -q - --thre
 ```bash
 sudo sed -i "s,Inherits=Adwaita,Inherits=breeze_cursors,g" /usr/share/icons/default/index.theme
 ```
-
+##### Create Xorg Keyboard Config File
+```bash
+sudo localectl set-x11-keymap br abnt2 
+```
