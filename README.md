@@ -1,4 +1,4 @@
-<div align="center">
+hdparm -I /dev/sda | grep TRIM<div align="center">
   <img src="https://www.archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png">
 </div>
 
@@ -106,9 +106,10 @@ yay -S plasma5-applets-window-buttons-git plasma5-applets-window-title-git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"
 ```
 
-##### SSD swappiness
+##### SSD tweaks
  ```bash
 sudo zsh -c 'echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf' 
+sudo systemctl enable fstrim.timer
 ```
  
 ##### Zsh syntax highlighing
