@@ -1,4 +1,4 @@
-hdparm -I /dev/sda | grep TRIM<div align="center">
+<div align="center">
   <img src="https://www.archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png">
 </div>
 
