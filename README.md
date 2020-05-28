@@ -40,9 +40,9 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  systemctl enable ufw.service
  systemctl enable bluetooth.service 
  
- useradd -m -g users -G wheel -s /bin/bash <username>
+ useradd -m -g users -G wheel -s /bin/bash yourusername
  passwd # for root
- passwd <username> # for user
+ passwd yourusername # for user
  
  # EDITOR=nano visudo # uncomment %wheel ALL=(ALL) ALL --> Automated below
  sed -i 's,# %wheel ALL=(ALL) ALL,%wheel ALL=(ALL) ALL,g' /etc/sudoers
