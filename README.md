@@ -108,7 +108,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/ma
 
 ##### SSD tweaks
  ```bash
-sudo zsh -c 'echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf' 
+sudo zsh -c 'echo "vm.swappiness=5" > /etc/sysctl.d/99-swappiness.conf' 
 sudo systemctl enable fstrim.timer
 ```
  
