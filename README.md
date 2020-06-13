@@ -139,7 +139,7 @@ sudo systemctl start avahi-daemon.service
 - Add the following line to `hosts:` section at `/etc/nsswitch.conf`
 ```bash
 mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
-# something like that
+# something like this
 # hosts: files mymachines myhostname mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
 ```
 ##### Speed up Makepkg
