@@ -100,11 +100,6 @@ yay -S plasma5-applets-window-buttons-git plasma5-applets-window-title-git
 ```
 > Only for KDE Plasma
 
-##### Cursor theme
- - Bibata
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/KaizIqbal/Bibata_Cursor/master/Bibata.sh)"
-```
 
 ##### SSD tweaks
  ```bash
