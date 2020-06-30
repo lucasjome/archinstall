@@ -54,7 +54,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 
 ```bash
 mkdir /boot/efi
-mount /dev/sda1 /boot/efi
+mount /dev/sda1 /boot/efi # mount your EFI partition into /boot/efi
 lsblk # to check if everything is mounted correctly
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
