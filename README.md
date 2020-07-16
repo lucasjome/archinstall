@@ -115,6 +115,7 @@ sudo systemctl enable fstrim.timer
  
  ##### Nano syntax highlighing
  ```bash
+ mkdir ~/.config/nano
  cp /etc/nanorc ~/.config/nano/nanorc
  echo 'include "/usr/share/nano/*.nanorc"' >> ~/.config/nano/nanorc
  echo 'include "/usr/share/nano-syntax-highlighting/*.nanorc"' >> ~/.config/nano/nanorc
