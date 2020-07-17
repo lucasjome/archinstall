@@ -19,7 +19,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs-3g efibootmgr os-prober grub unrar xorg xorg-server xorg-drivers firefox grub-customizer libreoffice-fresh unzip pavucontrol alsa-firmware pulseaudio-alsa alsa-utils pamixer zsh go bash iputils util-linux perl bzip2 nethogs mtr usbutils pciutils git libva-mesa-driver htop gnome-disk-utility git go intel-ucode exfat-utils qbittorrent lshw lyx texlive-most flameshot neofetch screenfetch aspell-pt figlet zsh-completions extra-cmake-modules nano-syntax-highlighting libreoffice-fresh-pt-br wget lib32-vulkan-intel vulkan-intel lib32-mesa-vdpau lib32-mesa lib32-libva-mesa-driver vulkan-mesa-layers lib32-vulkan-icd-loader lib32-libva1 lib32-libva1-intel-driver vdpauinfo libva-utils lib32-glu glu mesa mesa-demos mesa-vdpau intel-media-driver intel-gmmlib rsync gnome gdm gnome-tweaks chrome-gnome-shell celluloid zsh-syntax-highlighting system-config-printer foomatic-db foomatic-db-engine gutenprint gsfonts cups cups-pdf cups-filters sane nss-mdns pulseaudio-bluetooth python-pip python-pipenv jre-openjdk jdk-openjdk icedtea-web ttf-opensans ttf-dejavu ttf-liberation youtube-dl dart ttf-linux-libertine ttf-ubuntu-font-family noto-fonts-emoji ttf-carlito ttf-caladea ttf-fira-code noto-fonts-cjk ttf-roboto gnu-free-fonts eigen cpupower sassc ipython
 
 ## Installation process
-### During installation (Under construction)
+### During installation
 ```bash
  genfstab -U -p /mnt >> /mnt/etc/fstab
  arch-chroot /mnt bash
@@ -64,7 +64,7 @@ sudo cp /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
 sudo nano /boot/efi/startup.nsh # insert line below
 # bcfg boot add 1 fs0:\EFI\GRUB\grubx64.efi "My GRUB bootloader"
 ```
-### After installation (Under construction)
+### After installation
 ##### multilib 
 ```bash
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
