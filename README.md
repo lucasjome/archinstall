@@ -142,6 +142,26 @@ sudo sed -i 's,#MAKEFLAGS="-j2",MAKEFLAGS="-j$(($(nproc)-1))",g' /etc/makepkg.co
 sudo sed -i "s,PKGEXT='.pkg.tar.xz',PKGEXT='.pkg.tar.zst',g" /etc/makepkg.conf
 sudo sed -i "s,COMPRESSZST=(zstd -c -z -q -),COMPRESSZST=(zstd -c -z -q - --threads=$(($(nproc)-1))),g" /etc/makepkg.conf
 ```
+##### Performance Tweaks
+```bash
+# for CoreDump
+sudo sed -i 's/.*Storage=external/Storage=none/g' /etc/systemd/coredump.conf
+sudo zsh -c 'echo -e "\n* hard core 0\n" >> /etc/security/limits.conf'
+
+# for systemd start/stop
+sudo sed -i 's/#DefaultTimeoutStartSec=90s/DefaultTimeoutStartSec=10s/g' /etc/systemd/system.conf
+sudo sed -i 's/#DefaultTimeoutStopSec=90s/DefaultTimeoutStopSec=5s/g' /etc/systemd/system.conf
+
+# for mkinitcpio
+sudo sed -i 's/^MODULES=(/MODULES=(lz4 lz4_compress /g' /etc/mkinitcpio.conf
+sudo zsh -c "echo -e '\nCOMPRESSION=\"lz4\"\n' >> /etc/mkinitcpio.conf"
+sudo zsh -c "echo -e '\nCOMPRESSION_OPTIONS=\"-9\"\n' >> /etc/mkinitcpio.conf"
+hooks_content=$(grep "^HOOKS=(" /etc/mkinitcpio.conf) && sudo sed -i "s/^HOOKS=(.*/HOOKS=(${hooks_content:7:-1} shutdown)/g" /etc/mkinitcpio.conf
+sudo mkinitcpio -p linux
+
+
+```
+
 ##### KDE Plasma cursor fix
 ```bash
 sudo sed -i "s,Inherits=Adwaita,Inherits=breeze_cursors,g" /usr/share/icons/default/index.theme
