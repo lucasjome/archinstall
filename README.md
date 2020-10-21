@@ -130,10 +130,11 @@ sudo systemctl start org.cups.cupsd.service
 sudo systemctl enable avahi-daemon.service
 sudo systemctl start avahi-daemon.service
 ```
-- Add the following line to `hosts:` section at `/etc/nsswitch.conf`
+- Add the following line to `hosts:` section at `/etc/nsswitch.conf` before `resolve [!UNAVAIL=return] dns`
 ```bash
-mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
-# something like this
+mdns4_minimal [NOTFOUND=return]
+
+# final result
 # hosts: files mymachines myhostname mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
 ```
 ##### Speed up Makepkg
@@ -144,7 +145,7 @@ sudo sed -i "s,COMPRESSZST=(zstd -c -z -q -),COMPRESSZST=(zstd -c -z -q - --thre
 ```
 ##### Performance Tweaks
 ```bash
-# for CoreDump
+# for coredump
 sudo sed -i 's/.*Storage=external/Storage=none/g' /etc/systemd/coredump.conf
 sudo zsh -c 'echo -e "\n* hard core 0\n" >> /etc/security/limits.conf'
 
