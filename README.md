@@ -21,7 +21,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
 ## Installation process
 ### During installation
 ```bash
- genfstab -U -p /mnt >> /mnt/etc/fstab
+ genfstab -U /mnt >> /mnt/etc/fstab
  arch-chroot /mnt bash
  
  # nano /etc/locale.gen # en_US e pt_BR --> Automated below
