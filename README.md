@@ -40,7 +40,7 @@ pacstrap /mnt base base-devel nano networkmanager linux linux-firmware gufw ntfs
  systemctl enable ufw.service
  systemctl enable bluetooth.service 
  
- useradd -m -G users,wheel,sys,log,network,rfkill,lp,adm -s /bin/bash yourusername
+ useradd -m -G users,wheel,sys,log,network,rfkill,lp,adm,input -s /bin/bash yourusername
  passwd # for root
  passwd yourusername # for user
  
