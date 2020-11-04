@@ -150,8 +150,8 @@ sudo sed -i 's/.*Storage=external/Storage=none/g' /etc/systemd/coredump.conf
 sudo zsh -c 'echo -e "\n* hard core 0\n" >> /etc/security/limits.conf'
 
 # for systemd timeout
-sudo sed -i 's/#DefaultTimeoutStartSec=90s/DefaultTimeoutStartSec=10s/g' /etc/systemd/system.conf
-sudo sed -i 's/#DefaultTimeoutStopSec=90s/DefaultTimeoutStopSec=5s/g' /etc/systemd/system.conf
+sudo sed -i 's/#DefaultTimeoutStartSec=90s/DefaultTimeoutStartSec=15s/g' /etc/systemd/system.conf
+sudo sed -i 's/#DefaultTimeoutStopSec=90s/DefaultTimeoutStopSec=10s/g' /etc/systemd/system.conf
 
 # for mkinitcpio
 sudo sed -i 's/^MODULES=(/MODULES=(lz4 lz4_compress /g' /etc/mkinitcpio.conf
